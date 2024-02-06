@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @export var BASE_SPEED : float = 5.0
+@export var BASE_HEALTH : float = 100.0
 @export var SPRINT_MULTIPLIER : float = 2.5
 @export var VIEW_BOB_ANIMATION : bool = true
 @export var VIEW_BOB_MULTIPLIER : float = 0.1
@@ -14,8 +15,10 @@ extends CharacterBody3D
 
 @export var CAMERA_CONTROLLER : Camera3D
 @export var ANIMATION_PLAYER : AnimationPlayer
+@export var WEP_ANIMATION : AnimationPlayer
 
 var SPEED : float = BASE_SPEED
+var HEALTH : float = BASE_HEALTH
 
 var _mouse_input : bool = false
 var _mouse_rotation : Vector3
@@ -58,8 +61,14 @@ func _update_camera(delta):
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-func _physics_process(delta):
+func _process(delta):
+	if Input.is_action_just_pressed("attack_h"):
+		WEP_ANIMATION.play("H_Attack")
 
+
+
+func _physics_process(delta):
+	
 	_update_camera(delta);
 	
 	# Add the gravity.
@@ -116,3 +125,8 @@ func sprinting(state : bool):
 			SPEED = BASE_SPEED * SPRINT_MULTIPLIER
 		false:
 			SPEED = BASE_SPEED
+
+
+func _on_weapon_animation_animation_finished(anim_name):
+	if anim_name == "H_Attack":
+		WEP_ANIMATION.play("idle")
