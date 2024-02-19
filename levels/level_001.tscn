@@ -176,11 +176,14 @@ skeleton = NodePath("../Box")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Ramp/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_j6kcl")
 
-[node name="Enemy" parent="." instance=ExtResource("6_id1xu")]
+[node name="Enemy" parent="." node_paths=PackedStringArray("PLAYER") instance=ExtResource("6_id1xu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2522, -0.094389, -21.9)
+PLAYER = NodePath("../Player")
 
-[node name="Enemy2" parent="." instance=ExtResource("6_id1xu")]
+[node name="Enemy2" parent="." node_paths=PackedStringArray("PLAYER") instance=ExtResource("6_id1xu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.728, -0.0683657, -22.5682)
+PLAYER = NodePath("../Player")
 
-[node name="Enemy3" parent="." instance=ExtResource("6_id1xu")]
+[node name="Enemy3" parent="." node_paths=PackedStringArray("PLAYER") instance=ExtResource("6_id1xu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.469, -0.094389, -20.9006)
+PLAYER = NodePath("../Player")

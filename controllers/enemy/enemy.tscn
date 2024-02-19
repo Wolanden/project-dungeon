@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://byjcqu7ktuije"]
+[gd_scene load_steps=7 format=3 uid="uid://byjcqu7ktuije"]
 
 [ext_resource type="Script" path="res://controllers/enemy/enemy_controller.gd" id="1_s5aaq"]
+[ext_resource type="PackedScene" uid="uid://c1gkisgwvliho" path="res://controllers/healthbar/healthbar.tscn" id="2_3pax2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jsssp"]
 albedo_color = Color(0, 0.290196, 0, 1)
@@ -9,6 +10,9 @@ albedo_color = Color(0, 0.290196, 0, 1)
 material = SubResource("StandardMaterial3D_jsssp")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2gtys"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_21n04"]
+viewport_path = NodePath("SubViewport")
 
 [node name="Enemy" type="CharacterBody3D" groups=["enemies"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0179487, 0)
@@ -28,5 +32,18 @@ path_height_offset = -0.1
 avoidance_enabled = true
 radius = 1.5
 
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+transparent_bg = true
+
+[node name="Healthbar" parent="SubViewport" instance=ExtResource("2_3pax2")]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00852203, 2.24149, 0)
+billboard = 1
+texture = SubResource("ViewportTexture_21n04")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]
 [connection signal="velocity_computed" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_velocity_computed"]
+[connection signal="ready" from="SubViewport/Healthbar" to="." method="_on_healthbar_ready"]

@@ -16,6 +16,10 @@ extends CharacterBody3D
 @export var CAMERA_CONTROLLER : Camera3D
 @export var ANIMATION_PLAYER : AnimationPlayer
 @export var WEP_ANIMATION : AnimationPlayer
+@export var WEP_HITBOX : Area3D
+
+@onready var PARTICLES = preload("res://res/bloodsplatter/BloodSplatter.tscn")
+@onready var HEALTH_BAR = $Healthbar
 
 var SPEED : float = BASE_SPEED
 var HEALTH : float = BASE_HEALTH
@@ -26,6 +30,7 @@ var _rotation_input : float
 var _tilt_input : float
 var _player_rotation : Vector3
 var _camera_rotation : Vector3
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * 2
@@ -64,7 +69,15 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("attack_h"):
 		WEP_ANIMATION.play("H_Attack")
+		WEP_HITBOX.monitoring = true
+		
+	if HEALTH <= 0:
+		print("you ded")
 
+func _on_weapon_animation_animation_finished(anim_name):
+	if anim_name == "H_Attack":
+		WEP_ANIMATION.play("idle")
+		WEP_HITBOX.monitoring = false
 
 
 func _physics_process(delta):
@@ -126,7 +139,14 @@ func sprinting(state : bool):
 		false:
 			SPEED = BASE_SPEED
 
+func TakeDamage(damage):
+	HEALTH_BAR._set_health(HEALTH - damage)
+	HEALTH -= damage
 
-func _on_weapon_animation_animation_finished(anim_name):
-	if anim_name == "H_Attack":
-		WEP_ANIMATION.play("idle")
+func _on_hitbox_body_entered(body):
+	if body.is_in_group("enemies"):
+		body.TakeDamage(10)
+
+
+func _on_ready():
+	HEALTH_BAR._set_health(BASE_HEALTH)
