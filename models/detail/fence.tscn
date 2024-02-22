@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://ni5474aqaopa"]
+
+[ext_resource type="Texture2D" uid="uid://cne6h62e67c1l" path="res://models/detail/fence/fence_fence.png" id="1_dutfl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hprwp"]
+resource_name = "fence"
+transparency = 4
+albedo_color = Color(1, 1, 1, 1)
+albedo_texture = ExtResource("1_dutfl")
+metallic = 0.35
+roughness = 0.5
+emission_enabled = true
+texture_filter = 1
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_atioh"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -1.44382e-15, 1.00001, 0.5, 1e-05),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray(2, 0, 0, 0, 1, 0, 1, 0, 3, 0, 2, 0, 0, 0, 2, 0, 1, 0, 3, 0, 1, 0, 2, 0, 1, 0, 3, 0, 4, 0, 5, 0, 4, 0, 3, 0, 3, 0, 1, 0, 4, 0, 4, 0, 5, 0, 3, 0),
+"lods": [0.25, PackedByteArray(1, 0, 3, 0, 2, 0, 3, 0, 1, 0, 2, 0, 1, 0, 3, 0, 4, 0, 3, 0, 1, 0, 4, 0)],
+"name": "fence",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray(254, 255, 0, 0, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 254, 255, 255, 255, 0, 0, 0, 0, 255, 127, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_8digv"]
+resource_name = "fence_Mesh fence"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -1.44382e-15, 1.00001, 0.5, 1e-05),
+"attribute_data": PackedByteArray(255, 223, 255, 255, 255, 191, 255, 255, 255, 223, 255, 127, 255, 191, 255, 127, 255, 255, 255, 127, 255, 223, 255, 255, 255, 255, 255, 255, 255, 223, 255, 127, 255, 191, 255, 255, 255, 191, 255, 127, 255, 223, 255, 255, 255, 191, 255, 255, 255, 223, 255, 127, 255, 191, 255, 127),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray(2, 0, 0, 0, 1, 0, 1, 0, 3, 0, 2, 0, 6, 0, 4, 0, 5, 0, 7, 0, 5, 0, 4, 0, 5, 0, 7, 0, 8, 0, 9, 0, 8, 0, 7, 0, 12, 0, 10, 0, 11, 0, 11, 0, 13, 0, 12, 0),
+"lods": [0.25, PackedByteArray(1, 0, 3, 0, 2, 0, 7, 0, 5, 0, 4, 0, 5, 0, 7, 0, 8, 0, 12, 0, 10, 0, 11, 0)],
+"material": SubResource("StandardMaterial3D_hprwp"),
+"name": "fence",
+"primitive": 3,
+"uv_scale": Vector4(8, 2, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray(254, 255, 0, 0, 0, 0, 255, 127, 255, 127, 0, 0, 0, 0, 255, 127, 254, 255, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 0, 0, 255, 127, 254, 255, 255, 255, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 255, 127, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 255, 127, 255, 127, 255, 255, 0, 0, 255, 127, 0, 0, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_atioh")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_48nnf"]
+data = PackedVector3Array(0.5, 0.5, 0, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0, 0.5, 0.5, 0, 0.5, 0, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0.5, 0, -0.5, 0, 0, -0.5, 0.5, 0, -0.5, 0, 0, 0, 0.5, 0, 0, 0.5, 0, 0, 0, 0, -0.5, 0, 0, -0.5, 0, 0, -0.5, 0.5, 0, 0, 0.5, 0)
+
+[node name="fence" type="StaticBody3D"]
+
+[node name="fence" type="MeshInstance3D" parent="."]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+mesh = SubResource("ArrayMesh_8digv")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_48nnf")
