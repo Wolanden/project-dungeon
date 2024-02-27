@@ -1,42 +1,38 @@
 [gd_scene load_steps=12 format=3 uid="uid://uq3qjgifjlup"]
 
-[ext_resource type="Texture2D" uid="uid://jd1agns7cnnq" path="res://models/roof/roof/roof_planks.png" id="1_qo6lx"]
-[ext_resource type="Texture2D" uid="uid://c761gl7e7afxm" path="res://models/roof/roof/roof_roof.png" id="2_kqi84"]
-[ext_resource type="Texture2D" uid="uid://b0ygg32dnqs73" path="res://models/roof/roof/roof_cobblestoneAlternative.png" id="3_4fw2v"]
-[ext_resource type="Texture2D" uid="uid://bvtdkt1v1doyo" path="res://models/roof/roof/roof_cobblestone.png" id="4_qflt5"]
+[ext_resource type="Texture2D" uid="uid://jd1agns7cnnq" path="res://models/_contents/roof/roof/roof_planks.png" id="1_qo6lx"]
+[ext_resource type="Texture2D" uid="uid://c761gl7e7afxm" path="res://models/_contents/roof/roof/roof_roof.png" id="2_kqi84"]
+[ext_resource type="Texture2D" uid="uid://b0ygg32dnqs73" path="res://models/_contents/roof/roof/roof_cobblestoneAlternative.png" id="3_4fw2v"]
+[ext_resource type="Texture2D" uid="uid://bvtdkt1v1doyo" path="res://models/_contents/roof/roof/roof_cobblestone.png" id="4_qflt5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jmsp3"]
 resource_name = "planks"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("1_qo6lx")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b488b"]
 resource_name = "roof"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("2_kqi84")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wnldh"]
 resource_name = "bricks"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("3_4fw2v")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bvnnt"]
 resource_name = "stones"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("4_qflt5")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1

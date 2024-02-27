@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://cmsr24lv0ms05"]
 
-[ext_resource type="Texture2D" uid="uid://1skfh855u1fw" path="res://models/floor/floor_stepsCornerInner/floor_stepsCornerInner_cobblestoneAlternative.png" id="1_36d4j"]
-[ext_resource type="Texture2D" uid="uid://csrxi2v5oqktp" path="res://models/floor/floor_stepsCornerInner/floor_stepsCornerInner_cobblestone.png" id="2_ovy5s"]
+[ext_resource type="Texture2D" uid="uid://1skfh855u1fw" path="res://models/_contents/floor/floor_stepsCornerInner/floor_stepsCornerInner_cobblestoneAlternative.png" id="1_36d4j"]
+[ext_resource type="Texture2D" uid="uid://csrxi2v5oqktp" path="res://models/_contents/floor/floor_stepsCornerInner/floor_stepsCornerInner_cobblestone.png" id="2_ovy5s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fxr4k"]
 resource_name = "bricks"
 albedo_texture = ExtResource("1_36d4j")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
@@ -14,7 +14,7 @@ texture_filter = 1
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06mlw"]
 resource_name = "stones"
 albedo_texture = ExtResource("2_ovy5s")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1

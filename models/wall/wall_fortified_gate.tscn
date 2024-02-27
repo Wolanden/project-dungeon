@@ -1,13 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://c17rqow1i81ix"]
+[gd_scene load_steps=10 format=3 uid="uid://c17rqow1i81ix"]
 
-[ext_resource type="Texture2D" uid="uid://dn8kpcgybigys" path="res://models/_contents/wallFortified_gate/wallFortified_gate_planks.png" id="1_wrt40"]
-[ext_resource type="Texture2D" uid="uid://dfth22ecs2u6l" path="res://models/_contents/wallFortified_gate/wallFortified_gate_cobblestone.png" id="2_h1wdf"]
-[ext_resource type="Texture2D" uid="uid://cisodshodjp0a" path="res://models/_contents/wallFortified_gate/wallFortified_gate_cobblestoneAlternative.png" id="3_axw8r"]
+[ext_resource type="Texture2D" uid="uid://dn8kpcgybigys" path="res://models/_contents/wall/wallFortified_gate/wallFortified_gate_planks.png" id="1_wrt40"]
+[ext_resource type="Texture2D" uid="uid://dfth22ecs2u6l" path="res://models/_contents/wall/wallFortified_gate/wallFortified_gate_cobblestone.png" id="2_h1wdf"]
+[ext_resource type="Texture2D" uid="uid://cisodshodjp0a" path="res://models/_contents/wall/wallFortified_gate/wallFortified_gate_cobblestoneAlternative.png" id="3_axw8r"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_e4p45"]
+data = PackedVector3Array(-0.4, 1, -0.4, -0.5, 1, -0.4, -0.5, 1, -0.5, -0.5, 1, -0.5, -0.4, 1, -0.5, -0.4, 1, -0.4, -0.4, 1, 0.5, -0.4, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 1, 0.5, -0.4, 1, 0.5, 0.5, 1, 0.5, 0.5, 0, 0.5, 0.4, 0, 0.5, 0.4, 0, 0.5, 0.4, 1, 0.5, 0.5, 1, 0.5, -0.5, 1, 0.4, -0.5, 1, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.4, -0.5, 1, 0.4, -0.5, 1, -0.5, -0.5, 1, -0.4, -0.5, 0, -0.4, -0.5, 0, -0.4, -0.5, 0, -0.5, -0.5, 1, -0.5, -0.5, 1, -0.5, -0.5, 0, -0.5, -0.4, 0, -0.5, -0.4, 0, -0.5, -0.4, 1, -0.5, -0.5, 1, -0.5, 0.4, 1, -0.5, 0.4, 0, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 1, -0.5, 0.4, 1, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.4, 0.5, 1, -0.4, 0.5, 1, -0.4, 0.5, 1, -0.5, 0.5, 0, -0.5, 0.5, 0, 0.4, 0.5, 0, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 1, 0.4, 0.5, 0, 0.4, -0.5, 1, 0.5, -0.5, 1, 0.4, -0.4, 1, 0.4, -0.4, 1, 0.4, -0.4, 1, 0.5, -0.5, 1, 0.5, 0.5, 1, 0.5, 0.4, 1, 0.5, 0.4, 1, 0.4, 0.4, 1, 0.4, 0.5, 1, 0.4, 0.5, 1, 0.5, 0.5, 1, -0.4, 0.4, 1, -0.4, 0.4, 1, -0.5, 0.4, 1, -0.5, 0.5, 1, -0.5, 0.5, 1, -0.4, 0.4, 1, 0.5, 0.4, 0, 0.5, 0.25, 0, 0.5, 0.25, 0, 0.5, 0.25, 0.5, 0.5, 0.4, 1, 0.5, 0.25, 0.5, 0.5, 0.2165, 0.625, 0.5, 0.4, 1, 0.5, 0.2165, 0.625, 0.5, 0.125, 0.7165, 0.5, 0.4, 1, 0.5, 0.125, 0.7165, 0.5, 0, 0.75, 0.5, 0.4, 1, 0.5, -0.4, 1, 0.5, 0.4, 1, 0.5, 0, 0.75, 0.5, -0.4, 1, 0.5, 0, 0.75, 0.5, -0.125, 0.7165, 0.5, -0.4, 1, 0.5, -0.125, 0.7165, 0.5, -0.2165, 0.625, 0.5, -0.4, 1, 0.5, -0.2165, 0.625, 0.5, -0.25, 0.5, 0.5, -0.4, 0, 0.5, -0.4, 1, 0.5, -0.25, 0.5, 0.5, -0.25, 0.5, 0.5, -0.25, 0, 0.5, -0.4, 0, 0.5, -0.5, 1, -0.4, -0.5, 1, 0.4, -0.5, 0, 0.4, -0.5, 0, 0.4, -0.5, 0, -0.4, -0.5, 1, -0.4, -0.4, 1, -0.5, -0.4, 0, -0.5, -0.25, 0, -0.5, -0.25, 0, -0.5, -0.25, 0.5, -0.5, -0.4, 1, -0.5, -0.25, 0.5, -0.5, -0.2165, 0.625, -0.5, -0.4, 1, -0.5, -0.2165, 0.625, -0.5, -0.125, 0.7165, -0.5, -0.4, 1, -0.5, -0.125, 0.7165, -0.5, 0, 0.75, -0.5, -0.4, 1, -0.5, 0.4, 1, -0.5, -0.4, 1, -0.5, 0, 0.75, -0.5, 0.4, 1, -0.5, 0, 0.75, -0.5, 0.125, 0.7165, -0.5, 0.4, 1, -0.5, 0.125, 0.7165, -0.5, 0.2165, 0.625, -0.5, 0.4, 1, -0.5, 0.2165, 0.625, -0.5, 0.25, 0.5, -0.5, 0.4, 0, -0.5, 0.4, 1, -0.5, 0.25, 0.5, -0.5, 0.25, 0.5, -0.5, 0.25, 0, -0.5, 0.4, 0, -0.5, 0.5, 0, -0.4, 0.5, 0, 0.4, 0.5, 1, 0.4, 0.5, 1, 0.4, 0.5, 1, -0.4, 0.5, 0, -0.4, 0.25, 0.5, -0.5, 0.25, 0.5, 0.5, 0.25, 0, 0.5, 0.25, 0, 0.5, 0.25, 0, -0.5, 0.25, 0.5, -0.5, -0.25, 0, -0.5, -0.25, 0, 0.5, -0.25, 0.5, 0.5, -0.25, 0.5, 0.5, -0.25, 0.5, -0.5, -0.25, 0, -0.5, -0.5, 0, -0.5, -0.5, 0, -0.4, -0.5, 0, 0.4, -0.5, 0, 0.4, -0.5, 0, 0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, -0.4, 0, -0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, -0.4, 0, 0.5, -0.4, 0, -0.5, -0.4, 0, 0.5, -0.25, 0, -0.5, -0.4, 0, -0.5, -0.4, 0, 0.5, -0.25, 0, 0.5, -0.25, 0, -0.5, 0.5, 1, 0.4, 0.4, 1, 0.4, 0.4, 1, -0.4, 0.4, 1, -0.4, 0.5, 1, -0.4, 0.5, 1, 0.4, 0.4, 1, -0.5, 0.4, 1, -0.4, 0.4, 1, 0.4, 0.4, 1, -0.5, 0.4, 1, 0.4, 0.4, 1, 0.5, -0.4, 1, -0.5, 0.4, 1, -0.5, 0.4, 1, 0.5, -0.4, 1, -0.4, -0.4, 1, -0.5, 0.4, 1, 0.5, -0.4, 1, 0.4, -0.4, 1, -0.4, 0.4, 1, 0.5, 0.4, 1, 0.5, -0.4, 1, 0.5, -0.4, 1, 0.4, -0.4, 1, -0.4, -0.4, 1, 0.4, -0.5, 1, 0.4, -0.5, 1, 0.4, -0.5, 1, -0.4, -0.4, 1, -0.4, 0.2165, 0.625, -0.5, 0.2165, 0.625, 0.5, 0.25, 0.5, 0.5, 0.25, 0.5, 0.5, 0.25, 0.5, -0.5, 0.2165, 0.625, -0.5, 0.125, 0.7165, 0.5, 0.2165, 0.625, 0.5, 0.2165, 0.625, -0.5, 0.2165, 0.625, -0.5, 0.125, 0.7165, -0.5, 0.125, 0.7165, 0.5, 0, 0.75, 0.5, 0.125, 0.7165, 0.5, 0.125, 0.7165, -0.5, 0.125, 0.7165, -0.5, 0, 0.75, -0.5, 0, 0.75, 0.5, -0.125, 0.7165, 0.5, 0, 0.75, 0.5, 0, 0.75, -0.5, 0, 0.75, -0.5, -0.125, 0.7165, -0.5, -0.125, 0.7165, 0.5, -0.125, 0.7165, 0.5, -0.125, 0.7165, -0.5, -0.2165, 0.625, -0.5, -0.2165, 0.625, -0.5, -0.2165, 0.625, 0.5, -0.125, 0.7165, 0.5, -0.2165, 0.625, 0.5, -0.2165, 0.625, -0.5, -0.25, 0.5, -0.5, -0.25, 0.5, -0.5, -0.25, 0.5, 0.5, -0.2165, 0.625, 0.5, 0.4, 0, -0.5, 0.25, 0, -0.5, 0.25, 0, 0.5, 0.25, 0, 0.5, 0.4, 0, 0.5, 0.4, 0, -0.5, 0.4, 0, 0.5, 0.5, 0, -0.5, 0.4, 0, -0.5, 0.4, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0, -0.4, 0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0, 0.4, 0.5, 0, -0.4)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ptsx"]
 resource_name = "planks"
 albedo_texture = ExtResource("1_wrt40")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
@@ -15,7 +18,7 @@ texture_filter = 1
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d6al3"]
 resource_name = "stones"
 albedo_texture = ExtResource("2_h1wdf")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
@@ -23,7 +26,7 @@ texture_filter = 1
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kmy0l"]
 resource_name = "bricks"
 albedo_texture = ExtResource("3_axw8r")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
@@ -104,33 +107,12 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_p7b5u")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ef4da"]
-points = PackedVector3Array(0.0229331, 0.743854, -0.46207, 0.498216, 1, 0.488496, 0.48287, 1, 0.488401, 0.206387, 0.595238, 0.507937, 0.5, 0.601687, -0.492063, 0.00976797, 1, -0.488401, 0.00976797, 1, 0.488401, 0.498216, 1, -0.488496, 0.5, 0.601687, 0.492063, 0.206387, 0.595238, -0.507937, 0.0229331, 0.743854, 0.46207)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2ywru"]
-points = PackedVector3Array(0.227341, 0.584549, 0.489932, 0.25, 0.0203038, -0.460469, 0.5, 0.00887908, -0.479712, 0.227341, 0.584549, -0.489932, 0.5, 0.578482, -0.479712, 0.5, 0.00887908, 0.479712, 0.5, 0.578482, 0.479712, 0.25, 0.0203038, 0.460469, 0.222278, 0.531656, 0.507937, 0.222278, 0.531656, -0.507937)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_wryvw"]
-points = PackedVector3Array(-0.5, 0.601687, -0.492063, -0.00972014, 1, 0.488496, -0.0250664, 1, 0.488401, -0.206387, 0.595238, 0.507937, -0.498169, 1, 0.488401, -0.00972014, 1, -0.488496, -0.498169, 1, -0.488401, -0.0229331, 0.743854, -0.46207, -0.5, 0.601687, 0.492063, -0.206387, 0.595238, -0.507937, -0.0229331, 0.743854, 0.46207)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7udp2"]
-points = PackedVector3Array(-0.227341, 0.584549, 0.489932, -0.5, 0.00887908, -0.479712, -0.25, 0.0203038, -0.460469, -0.227341, 0.584549, -0.489932, -0.5, 0.578482, -0.479712, -0.5, 0.00887908, 0.479712, -0.5, 0.578482, 0.479712, -0.25, 0.0203038, 0.460469, -0.222278, 0.531656, 0.507937, -0.222278, 0.531656, -0.507937)
-
 [node name="wallFortified_gate" type="StaticBody3D"]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_e4p45")
 
 [node name="wallFortified_gate" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_3wsba")
 skeleton = NodePath("")
-
-[node name="@CollisionShape3D@93314" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_ef4da")
-
-[node name="@CollisionShape3D@93313" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_2ywru")
-
-[node name="@CollisionShape3D@93312" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_wryvw")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_7udp2")

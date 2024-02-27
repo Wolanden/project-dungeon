@@ -1,14 +1,14 @@
 [gd_scene load_steps=6 format=3 uid="uid://d21lklc7bmy7n"]
 
-[ext_resource type="Texture2D" uid="uid://b1x34wa6tpahh" path="res://models/detail/barrel/detail_barrel_barrel.png" id="1_y0rvg"]
+[ext_resource type="Texture2D" uid="uid://b1x34wa6tpahh" path="res://models/_contents/detail/barrel/detail_barrel_barrel.png" id="1_y0rvg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cjce2"]
 resource_name = "barrel"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("1_y0rvg")
-metallic = 0.35
-roughness = 0.5
+metallic_specular = 0.0
+roughness = 0.0
 emission_enabled = true
+normal_enabled = true
 texture_filter = 1
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_e7mlj"]

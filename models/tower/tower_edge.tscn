@@ -1,12 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://bfb06bgj6mden"]
 
-[ext_resource type="Texture2D" uid="uid://dqpfk7a6kfd8v" path="res://models/tower/tower_edge/tower_edge_cobblestoneAlternative.png" id="1_dnh02"]
+[ext_resource type="Texture2D" uid="uid://dqpfk7a6kfd8v" path="res://models/_contents/tower/tower_edge/tower_edge_cobblestoneAlternative.png" id="1_dnh02"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g513w"]
 resource_name = "bricks"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("1_dnh02")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1

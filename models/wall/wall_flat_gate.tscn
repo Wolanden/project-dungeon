@@ -1,12 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://drjho7ywaaa70"]
 
-[ext_resource type="Texture2D" uid="uid://bedsr4a7qople" path="res://models/_contents/wall_flatGate/wall_flatGate_cobblestone.png" id="1_wja5b"]
+[ext_resource type="Texture2D" uid="uid://bedsr4a7qople" path="res://models/_contents/wall/wall_flatGate/wall_flatGate_cobblestone.png" id="1_wja5b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u8jch"]
 resource_name = "stones"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("1_wja5b")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1

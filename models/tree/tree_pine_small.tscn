@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bfkpi3l8ld8uh"]
 
-[ext_resource type="Texture2D" uid="uid://dnnhy2bpbint8" path="res://models/tree/treePine_small/treePine_small_treeB.png" id="1_ilnvn"]
+[ext_resource type="Texture2D" uid="uid://dnnhy2bpbint8" path="res://models/_contents/tree/treePine_small/treePine_small_treeB.png" id="1_ilnvn"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_s640y"]
 data = PackedVector3Array(0, 0, 0, 0, 0, 0.35, 0, 0.4, 0.35, 0, 0.4, 0.35, 0, 0.4, 0, 0, 0, 0, 0, 0.4, 0, 0, 0, -0.35, 0, 0, 0, 0, 0.4, 0, 0, 0.4, -0.35, 0, 0, -0.35, 0, 0, 0.35, 0, 0, 0, 0, 0.4, 0.35, 0, 0.4, 0, 0, 0.4, 0.35, 0, 0, 0, 0, 0, -0.35, 0, 0.4, 0, 0, 0, 0, 0, 0.4, -0.35, 0, 0.4, 0, 0, 0, -0.35, 0.35, 0.4, 0, 0.35, 0, 0, 0, 0, 0, 0, 0, 0, -0.35, 0, 0, 0.35, 0.4, 0, -0.35, 0, 0, -0.35, 0.4, 0, 0.35, 0.4, 0, -0.35, 0.4, 0, 0, 0.4, 0, 0.35, 0.4, 0, 0.35, 0, 0, 0.35, 0.4, 0, 0, 0, 0, -0.35, 0, 0, 0, 0, 0, 0.35, 0.4, 0, -0.35, 0.4, 0, -0.35, 0, 0, 0.35, 0.4, 0, 0, 0.4, 0, -0.35, 0.4, 0, 0.35, 0.4, 0)
@@ -11,7 +11,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_ilnvn")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1

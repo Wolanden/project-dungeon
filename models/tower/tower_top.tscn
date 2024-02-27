@@ -1,22 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://wurt1kfkh7pt"]
+[gd_scene load_steps=9 format=3 uid="uid://wurt1kfkh7pt"]
 
-[ext_resource type="Texture2D" uid="uid://x6e8wxem03r1" path="res://models/tower/tower_top/tower_top_cobblestone.png" id="1_s0t1e"]
-[ext_resource type="Texture2D" uid="uid://col7syh7xlo45" path="res://models/tower/tower_top/tower_top_cobblestoneAlternative.png" id="2_vi45g"]
+[ext_resource type="Texture2D" uid="uid://x6e8wxem03r1" path="res://models/_contents/tower/tower_top/tower_top_cobblestone.png" id="1_s0t1e"]
+[ext_resource type="Texture2D" uid="uid://col7syh7xlo45" path="res://models/_contents/tower/tower_top/tower_top_cobblestoneAlternative.png" id="2_vi45g"]
+[ext_resource type="PackedScene" uid="uid://vr2m8r33w50m" path="res://models/_contents/overhang/overhang_round/overhang_round.glb" id="3_4kgm6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i88j5"]
 resource_name = "stones"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("1_s0t1e")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7mamr"]
 resource_name = "bricks"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("2_vi45g")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
@@ -87,3 +86,6 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConcavePolygonShape3D_cwite")
+
+[node name="overhang_round2" parent="." instance=ExtResource("3_4kgm6")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)

@@ -1,11 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://ni5474aqaopa"]
 
-[ext_resource type="Texture2D" uid="uid://cne6h62e67c1l" path="res://models/detail/fence/fence_fence.png" id="1_dutfl"]
+[ext_resource type="Texture2D" uid="uid://cne6h62e67c1l" path="res://models/_contents/detail/fence/fence_fence.png" id="1_dutfl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hprwp"]
 resource_name = "fence"
 transparency = 4
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("1_dutfl")
 metallic = 0.35
 roughness = 0.5

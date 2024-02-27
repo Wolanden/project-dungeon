@@ -1,42 +1,38 @@
 [gd_scene load_steps=12 format=3 uid="uid://cbfpj8axxbbj4"]
 
-[ext_resource type="Texture2D" uid="uid://c12h4sc6eppe5" path="res://models/roof/roof_corner/roof_corner_planks.png" id="1_pxduv"]
-[ext_resource type="Texture2D" uid="uid://c60ewfkkh8t4f" path="res://models/roof/roof_corner/roof_corner_cobblestone.png" id="2_lemdu"]
-[ext_resource type="Texture2D" uid="uid://celp2husbwrxf" path="res://models/roof/roof_corner/roof_corner_roof.png" id="3_btp1u"]
-[ext_resource type="Texture2D" uid="uid://cfm1w17waony0" path="res://models/roof/roof_corner/roof_corner_cobblestoneAlternative.png" id="4_02pix"]
+[ext_resource type="Texture2D" uid="uid://c12h4sc6eppe5" path="res://models/_contents/roof/roof_corner/roof_corner_planks.png" id="1_pxduv"]
+[ext_resource type="Texture2D" uid="uid://c60ewfkkh8t4f" path="res://models/_contents/roof/roof_corner/roof_corner_cobblestone.png" id="2_lemdu"]
+[ext_resource type="Texture2D" uid="uid://celp2husbwrxf" path="res://models/_contents/roof/roof_corner/roof_corner_roof.png" id="3_btp1u"]
+[ext_resource type="Texture2D" uid="uid://cfm1w17waony0" path="res://models/_contents/roof/roof_corner/roof_corner_cobblestoneAlternative.png" id="4_02pix"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uiodh"]
 resource_name = "planks"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("1_pxduv")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dmjig"]
 resource_name = "stones"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("2_lemdu")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7bp1l"]
 resource_name = "roof"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("3_btp1u")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbjsy"]
 resource_name = "bricks"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("4_02pix")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1

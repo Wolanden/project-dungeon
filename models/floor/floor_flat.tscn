@@ -1,11 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://dppitdb8lvas4"]
 
-[ext_resource type="Texture2D" uid="uid://24uls7fvx0o5" path="res://models/floor/floor_flat/floor_flat_cobblestoneAlternative.png" id="1_pk1dh"]
+[ext_resource type="Texture2D" uid="uid://24uls7fvx0o5" path="res://models/_contents/floor/floor_flat/floor_flat_cobblestoneAlternative.png" id="1_pk1dh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndhle"]
 resource_name = "bricks"
 albedo_texture = ExtResource("1_pk1dh")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1

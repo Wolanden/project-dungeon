@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://csr2i62dncjvp"]
 
-[ext_resource type="Texture2D" uid="uid://dn3ll37os3ywc" path="res://models/tree/treePine_large/treePine_large_treeB.png" id="1_fryi6"]
+[ext_resource type="Texture2D" uid="uid://dn3ll37os3ywc" path="res://models/_contents/tree/treePine_large/treePine_large_treeB.png" id="1_fryi6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0uefm"]
 resource_name = "treeB"
@@ -8,7 +8,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_fryi6")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1

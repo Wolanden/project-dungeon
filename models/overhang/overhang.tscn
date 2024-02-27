@@ -1,12 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://ua5bt0pqio8v"]
 
-[ext_resource type="Texture2D" uid="uid://dycweb84rl8xq" path="res://models/overhang/overhang/overhang_planks.png" id="1_qq6cr"]
+[ext_resource type="Texture2D" uid="uid://dycweb84rl8xq" path="res://models/_contents/overhang/overhang/overhang_planks.png" id="1_qq6cr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xq06g"]
 resource_name = "planks"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("1_qq6cr")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1

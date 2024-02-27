@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dah6bbal7hpd1"]
 
-[ext_resource type="Texture2D" uid="uid://r0d8v418w715" path="res://models/tree/tree_shrub/tree_shrub_treeA.png" id="1_rbx7m"]
+[ext_resource type="Texture2D" uid="uid://r0d8v418w715" path="res://models/_contents/tree/tree_shrub/tree_shrub_treeA.png" id="1_rbx7m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h10q7"]
 resource_name = "treeA"
@@ -8,7 +8,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_rbx7m")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1

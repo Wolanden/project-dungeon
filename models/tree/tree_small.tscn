@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cl5apfjfu743n"]
 
-[ext_resource type="Texture2D" uid="uid://c20g0hp2s0roy" path="res://models/tree/tree_small/tree_small_treeA.png" id="1_lgt20"]
+[ext_resource type="Texture2D" uid="uid://c20g0hp2s0roy" path="res://models/_contents/tree/tree_small/tree_small_treeA.png" id="1_lgt20"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hfwup"]
 resource_name = "treeA"
@@ -8,7 +8,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_lgt20")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1

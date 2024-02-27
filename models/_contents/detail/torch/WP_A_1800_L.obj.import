@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cs0wsj1xi0ekq"
+path="res://.godot/imported/WP_A_1800_L.obj-a3f5acb5a78b50817c979a7eed6f00bd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/WP_A_1800_L.obj-a3f5acb5a78b50817c979a7eed6f00bd.mesh"]
+
+source_file="res://models/_contents/detail/torch/WP_A_1800_L.obj"
+dest_files=["res://.godot/imported/WP_A_1800_L.obj-a3f5acb5a78b50817c979a7eed6f00bd.mesh", "res://.godot/imported/WP_A_1800_L.obj-a3f5acb5a78b50817c979a7eed6f00bd.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

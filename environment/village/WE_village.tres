@@ -10,4 +10,5 @@ sky_material = SubResource("PanoramaSkyMaterial_5e208")
 
 [resource]
 background_mode = 2
+background_energy_multiplier = 0.1
 sky = SubResource("Sky_6kg0g")

@@ -1,12 +1,11 @@
 [gd_scene load_steps=6 format=3 uid="uid://sych6y6ueuf5"]
 
-[ext_resource type="Texture2D" uid="uid://glcyghywyaif" path="res://models/structure/structure_poles/structure_poles_planks.png" id="1_dey8q"]
+[ext_resource type="Texture2D" uid="uid://glcyghywyaif" path="res://models/_contents/structure/structure_poles/structure_poles_planks.png" id="1_dey8q"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ptmck"]
 resource_name = "planks"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("1_dey8q")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1

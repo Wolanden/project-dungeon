@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://8485vo6yx8hy"]
+[gd_scene load_steps=28 format=3 uid="uid://8485vo6yx8hy"]
 
 [ext_resource type="Script" path="res://levels/village/village.gd" id="1_lnmb3"]
 [ext_resource type="Texture2D" uid="uid://ddve7nsdiyfam" path="res://textures/floor/Dirty_Grass_DIFF.jpg" id="2_735x0"]
@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://c665f25cmpykt" path="res://models/detail/detail_crate_small.tscn" id="20_rw8d4"]
 [ext_resource type="PackedScene" uid="uid://ni5474aqaopa" path="res://models/detail/fence.tscn" id="24_vb5gu"]
 [ext_resource type="PackedScene" uid="uid://cl5apfjfu743n" path="res://models/tree/tree_small.tscn" id="25_a3kh8"]
+[ext_resource type="PackedScene" uid="uid://dq0re4ev16o3h" path="res://models/detail/torch.tscn" id="26_st6i3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pc2ia"]
 albedo_texture = ExtResource("2_735x0")
@@ -4159,193 +4160,6 @@ transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 21, 0, -57)
 
 [node name="Decoration" type="Node3D" parent="Map/Castle"]
 
-[node name="CratesnBarrels" type="Node3D" parent="Map/Castle/Decoration"]
-
-[node name="detail_barrel" parent="Map/Castle/Decoration/CratesnBarrels" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -29, 0, -52)
-
-[node name="detail_crate" parent="Map/Castle/Decoration/CratesnBarrels" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -53)
-
-[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesnBarrels" instance=ExtResource("20_rw8d4")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -28, 0, -50)
-
-[node name="detail_crate2" parent="Map/Castle/Decoration/CratesnBarrels" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -26, 0, -51)
-
-[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesnBarrels" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -25, 0, -53)
-
-[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesnBarrels" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -48)
-
-[node name="CratesnBarrels2" type="Node3D" parent="Map/Castle/Decoration"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 0)
-
-[node name="detail_barrel" parent="Map/Castle/Decoration/CratesnBarrels2" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -29, 0, -52)
-
-[node name="detail_crate" parent="Map/Castle/Decoration/CratesnBarrels2" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -53)
-
-[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesnBarrels2" instance=ExtResource("20_rw8d4")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -28, 0, -50)
-
-[node name="detail_crate2" parent="Map/Castle/Decoration/CratesnBarrels2" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -26, 0, -51)
-
-[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesnBarrels2" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -25, 0, -53)
-
-[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesnBarrels2" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -48)
-
-[node name="CratesnBarrels3" type="Node3D" parent="Map/Castle/Decoration"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 29)
-
-[node name="detail_barrel" parent="Map/Castle/Decoration/CratesnBarrels3" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -29, 0, -52)
-
-[node name="detail_crate" parent="Map/Castle/Decoration/CratesnBarrels3" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -53)
-
-[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesnBarrels3" instance=ExtResource("20_rw8d4")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -28, 0, -50)
-
-[node name="detail_crate2" parent="Map/Castle/Decoration/CratesnBarrels3" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -26, 0, -51)
-
-[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesnBarrels3" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -25, 0, -53)
-
-[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesnBarrels3" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -48)
-
-[node name="CratesnBarrels4" type="Node3D" parent="Map/Castle/Decoration"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 29)
-
-[node name="detail_barrel" parent="Map/Castle/Decoration/CratesnBarrels4" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -29, 0, -52)
-
-[node name="detail_crate" parent="Map/Castle/Decoration/CratesnBarrels4" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -53)
-
-[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesnBarrels4" instance=ExtResource("20_rw8d4")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -28, 0, -50)
-
-[node name="detail_crate2" parent="Map/Castle/Decoration/CratesnBarrels4" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -26, 0, -51)
-
-[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesnBarrels4" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -25, 0, -53)
-
-[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesnBarrels4" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -48)
-
-[node name="BarrelsnCrates" type="Node3D" parent="Map/Castle/Decoration"]
-
-[node name="detail_barrel" parent="Map/Castle/Decoration/BarrelsnCrates" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -61)
-
-[node name="detail_crate" parent="Map/Castle/Decoration/BarrelsnCrates" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -61)
-
-[node name="detail_crateSmall" parent="Map/Castle/Decoration/BarrelsnCrates" instance=ExtResource("20_rw8d4")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 2, -61)
-
-[node name="detail_crate2" parent="Map/Castle/Decoration/BarrelsnCrates" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -63)
-
-[node name="detail_barrel2" parent="Map/Castle/Decoration/BarrelsnCrates" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -63)
-
-[node name="detail_barrel3" parent="Map/Castle/Decoration/BarrelsnCrates" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 2, -63)
-
-[node name="BarrelsnCrates2" type="Node3D" parent="Map/Castle/Decoration"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 5)
-
-[node name="detail_barrel" parent="Map/Castle/Decoration/BarrelsnCrates2" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -61)
-
-[node name="detail_crate" parent="Map/Castle/Decoration/BarrelsnCrates2" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -61)
-
-[node name="detail_crateSmall" parent="Map/Castle/Decoration/BarrelsnCrates2" instance=ExtResource("20_rw8d4")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 2, -61)
-
-[node name="detail_crate2" parent="Map/Castle/Decoration/BarrelsnCrates2" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -63)
-
-[node name="detail_barrel2" parent="Map/Castle/Decoration/BarrelsnCrates2" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -63)
-
-[node name="detail_barrel3" parent="Map/Castle/Decoration/BarrelsnCrates2" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 2, -63)
-
-[node name="BarrelsnCrates3" type="Node3D" parent="Map/Castle/Decoration"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 46)
-
-[node name="detail_barrel" parent="Map/Castle/Decoration/BarrelsnCrates3" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -61)
-
-[node name="detail_crate" parent="Map/Castle/Decoration/BarrelsnCrates3" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -61)
-
-[node name="detail_crateSmall" parent="Map/Castle/Decoration/BarrelsnCrates3" instance=ExtResource("20_rw8d4")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 2, -61)
-
-[node name="detail_crate2" parent="Map/Castle/Decoration/BarrelsnCrates3" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -63)
-
-[node name="detail_barrel2" parent="Map/Castle/Decoration/BarrelsnCrates3" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -63)
-
-[node name="detail_barrel3" parent="Map/Castle/Decoration/BarrelsnCrates3" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 2, -63)
-
-[node name="BarrelsnCrates4" type="Node3D" parent="Map/Castle/Decoration"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 53)
-
-[node name="detail_barrel" parent="Map/Castle/Decoration/BarrelsnCrates4" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -61)
-
-[node name="detail_crate" parent="Map/Castle/Decoration/BarrelsnCrates4" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -61)
-
-[node name="detail_crateSmall" parent="Map/Castle/Decoration/BarrelsnCrates4" instance=ExtResource("20_rw8d4")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 2, -61)
-
-[node name="detail_crate2" parent="Map/Castle/Decoration/BarrelsnCrates4" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -63)
-
-[node name="detail_barrel2" parent="Map/Castle/Decoration/BarrelsnCrates4" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -63)
-
-[node name="detail_barrel3" parent="Map/Castle/Decoration/BarrelsnCrates4" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 2, -63)
-
-[node name="CratesnBarrels5" type="Node3D" parent="Map/Castle/Decoration"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 41)
-
-[node name="detail_barrel" parent="Map/Castle/Decoration/CratesnBarrels5" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -29, 0, -52)
-
-[node name="detail_crate" parent="Map/Castle/Decoration/CratesnBarrels5" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -53)
-
-[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesnBarrels5" instance=ExtResource("20_rw8d4")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -28, 0, -50)
-
-[node name="detail_crate2" parent="Map/Castle/Decoration/CratesnBarrels5" instance=ExtResource("19_ow00a")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -26, 0, -51)
-
-[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesnBarrels5" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -25, 0, -53)
-
-[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesnBarrels5" instance=ExtResource("18_uc3sa")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -48)
-
 [node name="Garden" type="Node3D" parent="Map/Castle/Decoration"]
 
 [node name="fence" parent="Map/Castle/Decoration/Garden" instance=ExtResource("24_vb5gu")]
@@ -4387,6 +4201,197 @@ transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, -39)
 [node name="treePine_large" parent="Map/Castle/Decoration/Garden" instance=ExtResource("14_b88dn")]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, -35)
 
+[node name="CratesNBarrels" type="Node3D" parent="Map/Castle/Decoration"]
+
+[node name="CratesnBarrels" type="Node3D" parent="Map/Castle/Decoration/CratesNBarrels"]
+
+[node name="detail_barrel" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -29, 0, -52)
+
+[node name="detail_crate" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -53)
+
+[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels" instance=ExtResource("20_rw8d4")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -28, 0, -50)
+
+[node name="detail_crate2" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -26, 0, -51)
+
+[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -25, 0, -53)
+
+[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -48)
+
+[node name="CratesnBarrels2" type="Node3D" parent="Map/Castle/Decoration/CratesNBarrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 0)
+
+[node name="detail_barrel" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels2" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -29, 0, -52)
+
+[node name="detail_crate" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels2" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -53)
+
+[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels2" instance=ExtResource("20_rw8d4")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -28, 0, -50)
+
+[node name="detail_crate2" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels2" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -26, 0, -51)
+
+[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels2" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -25, 0, -53)
+
+[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels2" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -48)
+
+[node name="CratesnBarrels3" type="Node3D" parent="Map/Castle/Decoration/CratesNBarrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 29)
+
+[node name="detail_barrel" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels3" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -29, 0, -52)
+
+[node name="detail_crate" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels3" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -53)
+
+[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels3" instance=ExtResource("20_rw8d4")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -28, 0, -50)
+
+[node name="detail_crate2" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels3" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -26, 0, -51)
+
+[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels3" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -25, 0, -53)
+
+[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels3" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -48)
+
+[node name="CratesnBarrels4" type="Node3D" parent="Map/Castle/Decoration/CratesNBarrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 0, 29)
+
+[node name="detail_barrel" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels4" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -29, 0, -52)
+
+[node name="detail_crate" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels4" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -53)
+
+[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels4" instance=ExtResource("20_rw8d4")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -28, 0, -50)
+
+[node name="detail_crate2" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels4" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -26, 0, -51)
+
+[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels4" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -25, 0, -53)
+
+[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels4" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -48)
+
+[node name="BarrelsnCrates" type="Node3D" parent="Map/Castle/Decoration/CratesNBarrels"]
+
+[node name="detail_barrel" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -61)
+
+[node name="detail_crate" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -61)
+
+[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates" instance=ExtResource("20_rw8d4")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 2, -61)
+
+[node name="detail_crate2" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -63)
+
+[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -63)
+
+[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 2, -63)
+
+[node name="BarrelsnCrates2" type="Node3D" parent="Map/Castle/Decoration/CratesNBarrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 5)
+
+[node name="detail_barrel" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates2" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -61)
+
+[node name="detail_crate" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates2" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -61)
+
+[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates2" instance=ExtResource("20_rw8d4")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 2, -61)
+
+[node name="detail_crate2" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates2" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -63)
+
+[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates2" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -63)
+
+[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates2" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 2, -63)
+
+[node name="BarrelsnCrates3" type="Node3D" parent="Map/Castle/Decoration/CratesNBarrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 0, 46)
+
+[node name="detail_barrel" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates3" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -61)
+
+[node name="detail_crate" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates3" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -61)
+
+[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates3" instance=ExtResource("20_rw8d4")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 2, -61)
+
+[node name="detail_crate2" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates3" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -63)
+
+[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates3" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -63)
+
+[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates3" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 2, -63)
+
+[node name="BarrelsnCrates4" type="Node3D" parent="Map/Castle/Decoration/CratesNBarrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 53)
+
+[node name="detail_barrel" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates4" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -61)
+
+[node name="detail_crate" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates4" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -61)
+
+[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates4" instance=ExtResource("20_rw8d4")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 2, -61)
+
+[node name="detail_crate2" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates4" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 0, -63)
+
+[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates4" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 0, -63)
+
+[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesNBarrels/BarrelsnCrates4" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 13, 2, -63)
+
+[node name="CratesnBarrels5" type="Node3D" parent="Map/Castle/Decoration/CratesNBarrels"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 41)
+
+[node name="detail_barrel" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels5" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -29, 0, -52)
+
+[node name="detail_crate" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels5" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -53)
+
+[node name="detail_crateSmall" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels5" instance=ExtResource("20_rw8d4")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -28, 0, -50)
+
+[node name="detail_crate2" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels5" instance=ExtResource("19_ow00a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -26, 0, -51)
+
+[node name="detail_barrel2" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels5" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -25, 0, -53)
+
+[node name="detail_barrel3" parent="Map/Castle/Decoration/CratesNBarrels/CratesnBarrels5" instance=ExtResource("18_uc3sa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -27, 0, -48)
+
+[node name="Torches" type="Node3D" parent="Map/Castle/Decoration"]
+
 [node name="Player" parent="." instance=ExtResource("3_sv1fe")]
 
 [node name="WeVillage" parent="." instance=ExtResource("4_bmktj")]
@@ -4394,3 +4399,6 @@ transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, -35)
 [node name="Enemy" parent="." node_paths=PackedStringArray("PLAYER") instance=ExtResource("5_wd75d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0179487, -26.4452)
 PLAYER = NodePath("../Player")
+
+[node name="Torch" parent="." instance=ExtResource("26_st6i3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 1)

@@ -1,32 +1,29 @@
 [gd_scene load_steps=10 format=3 uid="uid://cwlugs5ag38ty"]
 
-[ext_resource type="Texture2D" uid="uid://crwf7bls141fa" path="res://models/structure/structure_wall/structure_wall_planks.png" id="1_6a2sf"]
-[ext_resource type="Texture2D" uid="uid://bjobgvbm2pp2j" path="res://models/structure/structure_wall/structure_wall_cobblestone.png" id="2_73ove"]
-[ext_resource type="Texture2D" uid="uid://bc30a50ut0ly" path="res://models/structure/structure_wall/structure_wall_cobblestoneAlternative.png" id="3_bgg4c"]
+[ext_resource type="Texture2D" uid="uid://crwf7bls141fa" path="res://models/_contents/structure/structure_wall/structure_wall_planks.png" id="1_6a2sf"]
+[ext_resource type="Texture2D" uid="uid://bjobgvbm2pp2j" path="res://models/_contents/structure/structure_wall/structure_wall_cobblestone.png" id="2_73ove"]
+[ext_resource type="Texture2D" uid="uid://bc30a50ut0ly" path="res://models/_contents/structure/structure_wall/structure_wall_cobblestoneAlternative.png" id="3_bgg4c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5qxr"]
 resource_name = "planks"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("1_6a2sf")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j2wvk"]
 resource_name = "stones"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("2_73ove")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d22rj"]
 resource_name = "bricks"
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("3_bgg4c")
-metallic = 0.35
+metallic_specular = 0.0
 roughness = 0.5
 emission_enabled = true
 texture_filter = 1
