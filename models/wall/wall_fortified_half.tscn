@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://cmm4xf7vx58eg"]
 
-[ext_resource type="Texture2D" uid="uid://bti8aejdlhcc8" path="res://models/wall/wallFortified_half/wallFortified_half_planks.png" id="1_rkcs3"]
-[ext_resource type="Texture2D" uid="uid://csll3yea07gqp" path="res://models/wall/wallFortified_half/wallFortified_half_cobblestone.png" id="2_x440l"]
-[ext_resource type="Texture2D" uid="uid://b2bbalu7iyhbf" path="res://models/wall/wallFortified_half/wallFortified_half_cobblestoneAlternative.png" id="3_mmxdg"]
+[ext_resource type="Texture2D" uid="uid://bti8aejdlhcc8" path="res://models/_contents/wallFortified_half/wallFortified_half_planks.png" id="1_rkcs3"]
+[ext_resource type="Texture2D" uid="uid://csll3yea07gqp" path="res://models/_contents/wallFortified_half/wallFortified_half_cobblestone.png" id="2_x440l"]
+[ext_resource type="Texture2D" uid="uid://b2bbalu7iyhbf" path="res://models/_contents/wallFortified_half/wallFortified_half_cobblestoneAlternative.png" id="3_mmxdg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dlopc"]
 resource_name = "planks"

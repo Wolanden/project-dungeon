@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://cll2jin11i5di"]
 
-[ext_resource type="Texture2D" uid="uid://c5d0lh7mbdgwl" path="res://models/wall/wallFortified_gateHalf/wallFortified_gateHalf_planks.png" id="1_8je30"]
-[ext_resource type="Texture2D" uid="uid://c0jlbqrc683oa" path="res://models/wall/wallFortified_gateHalf/wallFortified_gateHalf_cobblestone.png" id="2_1lqpw"]
-[ext_resource type="Texture2D" uid="uid://b0urw6xl4ujwj" path="res://models/wall/wallFortified_gateHalf/wallFortified_gateHalf_cobblestoneAlternative.png" id="3_b6yxu"]
+[ext_resource type="Texture2D" uid="uid://c5d0lh7mbdgwl" path="res://models/_contents/wallFortified_gateHalf/wallFortified_gateHalf_planks.png" id="1_8je30"]
+[ext_resource type="Texture2D" uid="uid://c0jlbqrc683oa" path="res://models/_contents/wallFortified_gateHalf/wallFortified_gateHalf_cobblestone.png" id="2_1lqpw"]
+[ext_resource type="Texture2D" uid="uid://b0urw6xl4ujwj" path="res://models/_contents/wallFortified_gateHalf/wallFortified_gateHalf_cobblestoneAlternative.png" id="3_b6yxu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nn5uk"]
 resource_name = "planks"

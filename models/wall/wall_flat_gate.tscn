@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://drjho7ywaaa70"]
 
-[ext_resource type="Texture2D" uid="uid://bedsr4a7qople" path="res://models/wall/wall_flatGate/wall_flatGate_cobblestone.png" id="1_wja5b"]
+[ext_resource type="Texture2D" uid="uid://bedsr4a7qople" path="res://models/_contents/wall_flatGate/wall_flatGate_cobblestone.png" id="1_wja5b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u8jch"]
 resource_name = "stones"

@@ -1,10 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://8485vo6yx8hy"]
+[gd_scene load_steps=12 format=3 uid="uid://8485vo6yx8hy"]
 
 [ext_resource type="Script" path="res://levels/village/village.gd" id="1_lnmb3"]
 [ext_resource type="Texture2D" uid="uid://ddve7nsdiyfam" path="res://textures/floor/Dirty_Grass_DIFF.jpg" id="2_735x0"]
 [ext_resource type="PackedScene" uid="uid://b7i4dbd5lrwgs" path="res://controllers/player/Player.tscn" id="3_sv1fe"]
 [ext_resource type="PackedScene" uid="uid://bb7ljvpr4vres" path="res://environment/village/WE_village.tscn" id="4_bmktj"]
+[ext_resource type="PackedScene" uid="uid://byarsdkadm2wy" path="res://models/wall/wall.tscn" id="4_loqif"]
 [ext_resource type="PackedScene" uid="uid://byjcqu7ktuije" path="res://controllers/enemy/enemy.tscn" id="5_wd75d"]
+[ext_resource type="PackedScene" uid="uid://cugeq85l4gig3" path="res://models/wall/wall_detail.tscn" id="8_q2hy2"]
+[ext_resource type="PackedScene" uid="uid://cniynoacr0nk5" path="res://models/wall/wall_gate_half.tscn" id="9_mimi7"]
+[ext_resource type="PackedScene" uid="uid://dyoeabx2q0ttl" path="res://models/floor/floor_stairs.tscn" id="9_uwasa"]
+[ext_resource type="PackedScene" uid="uid://bkuk3tb4mebww" path="res://models/floor/floor_stairs_corner_inner.tscn" id="10_h5m0a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pc2ia"]
 albedo_texture = ExtResource("2_735x0")
@@ -14,14 +19,100 @@ uv1_triplanar = true
 [node name="World" type="Node3D"]
 script = ExtResource("1_lnmb3")
 
-[node name="Map" type="Node3D" parent="."]
+[node name="Map" type="Node" parent="."]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Map"]
 material_override = SubResource("StandardMaterial3D_pc2ia")
 use_collision = true
 size = Vector3(1000, 0, 1000)
 
-[node name="Castle" type="Node3D" parent="Map"]
+[node name="Environment" type="Node" parent="Map"]
+
+[node name="Castle" type="Node" parent="Map"]
+
+[node name="wall2" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(-2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, -21, 0, -3)
+
+[node name="wall3" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(-2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, -15, 0, -3)
+
+[node name="wall4" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(-2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, -9, 0, -3)
+
+[node name="wall5" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(-2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, 9, 0, -3)
+
+[node name="wall6" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(-2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, 15, 0, -3)
+
+[node name="wall7" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(-2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, 21, 0, -3)
+
+[node name="wall_detail" parent="Map/Castle" instance=ExtResource("8_q2hy2")]
+transform = Transform3D(-2.62268e-07, 0, -6, 0, 6, 0, 6, 0, -2.62268e-07, -9, 0, 0)
+
+[node name="wall_detail2" parent="Map/Castle" instance=ExtResource("8_q2hy2")]
+transform = Transform3D(-2.62268e-07, 0, -6, 0, 6, 0, 6, 0, -2.62268e-07, -20, 0, 0)
+
+[node name="wall_detail3" parent="Map/Castle" instance=ExtResource("8_q2hy2")]
+transform = Transform3D(-2.62268e-07, 0, -6, 0, 6, 0, 6, 0, -2.62268e-07, 21, 0, 0)
+
+[node name="wall_detail6" parent="Map/Castle" instance=ExtResource("8_q2hy2")]
+transform = Transform3D(-2.62268e-07, 0, -6, 0, 6, 0, 6, 0, -2.62268e-07, -9, 6, 0)
+
+[node name="wall_detail7" parent="Map/Castle" instance=ExtResource("8_q2hy2")]
+transform = Transform3D(-2.62268e-07, 0, -6, 0, 6, 0, 6, 0, -2.62268e-07, -20, 6, 0)
+
+[node name="wall_detail8" parent="Map/Castle" instance=ExtResource("8_q2hy2")]
+transform = Transform3D(-2.62268e-07, 0, -6, 0, 6, 0, 6, 0, -2.62268e-07, 21, 6, 0)
+
+[node name="wall_detail4" parent="Map/Castle" instance=ExtResource("8_q2hy2")]
+transform = Transform3D(-2.62268e-07, 0, -6, 0, 6, 0, 6, 0, -2.62268e-07, 10, 0, 0)
+
+[node name="wall_detail5" parent="Map/Castle" instance=ExtResource("8_q2hy2")]
+transform = Transform3D(-2.62268e-07, 0, -6, 0, 6, 0, 6, 0, -2.62268e-07, 10, 6, 0)
+
+[node name="wall_gateHalf" parent="Map/Castle" instance=ExtResource("9_mimi7")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -3, 0, -3)
+
+[node name="wall_gateHalf2" parent="Map/Castle" instance=ExtResource("9_mimi7")]
+transform = Transform3D(-6, 0, -5.24537e-07, 0, 6, 0, 5.24537e-07, 0, -6, 3, 0, -3)
+
+[node name="wall8" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 21, 6, -3)
+
+[node name="wall9" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 15, 6, -3)
+
+[node name="wall10" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 9, 6, -3)
+
+[node name="wall11" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 3, 6, -3)
+
+[node name="wall12" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -3, 6, -3)
+
+[node name="wall13" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -9, 6, -3)
+
+[node name="wall14" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -15, 6, -3)
+
+[node name="wall15" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -21, 6, -3)
+
+[node name="wall16" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 21, 0, -9)
+
+[node name="wall17" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 21, 6, -9)
+
+[node name="wall18" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 27, 0, -9)
+
+[node name="wall19" parent="Map/Castle" instance=ExtResource("4_loqif")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 27, 6, -9)
 
 [node name="Player" parent="." instance=ExtResource("3_sv1fe")]
 
@@ -30,3 +121,12 @@ size = Vector3(1000, 0, 1000)
 [node name="Enemy" parent="." node_paths=PackedStringArray("PLAYER") instance=ExtResource("5_wd75d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0179487, -29.4452)
 PLAYER = NodePath("../Player")
+
+[node name="floor_stairs2" parent="." instance=ExtResource("9_uwasa")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -4.78024, 0, 12.5507)
+
+[node name="floor_stairs3" parent="." instance=ExtResource("9_uwasa")]
+transform = Transform3D(-2.62268e-07, 0, 6, 0, 6, 0, -6, 0, -2.62268e-07, -10.7802, 0, 18.5508)
+
+[node name="floor_stairsCornerInner" parent="." instance=ExtResource("10_h5m0a")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -10.7297, 0, 12.5342)

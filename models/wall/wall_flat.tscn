@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cxjkj60qcye0x"]
 
-[ext_resource type="Texture2D" uid="uid://dihxt8122n6om" path="res://models/wall/wall_flat/wall_flat_cobblestone.png" id="1_dpwil"]
+[ext_resource type="Texture2D" uid="uid://dihxt8122n6om" path="res://models/_contents/wall_flat/wall_flat_cobblestone.png" id="1_dpwil"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ek8g3"]
 data = PackedVector3Array(0.5, 1, 0, 0.5, 0, 0, -0.5, 0, 0, -0.5, 0, 0, -0.5, 1, 0, 0.5, 1, 0, 0.5, 0, 0, 0.5, 1, 0, -0.5, 0, 0, -0.5, 1, 0, -0.5, 0, 0, 0.5, 1, 0)

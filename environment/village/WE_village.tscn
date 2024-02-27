@@ -6,5 +6,13 @@
 environment = ExtResource("1_75gll")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.905183, -0.346446, -0.246207, 0, -0.579281, 0.815128, -0.425021, -0.73784, -0.524356, 0, 0, 0)
+transform = Transform3D(0.905183, -0.0708802, -0.419069, 7.45058e-09, -0.985996, 0.166769, -0.425021, -0.150956, -0.892507, 0, 0, 0)
+light_color = Color(1, 0.690196, 0.819608, 1)
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
 shadow_enabled = true
+shadow_bias = 0.0
+shadow_normal_bias = 5.974
+shadow_opacity = 0.96
+shadow_blur = 3.867
+sky_mode = 1

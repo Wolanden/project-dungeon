@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dtgqtpkyu081s"]
 
-[ext_resource type="Texture2D" uid="uid://dakq4gf3sqqm3" path="res://models/wall/wallPaint/wallPaint_cobblestonePainted.png" id="1_tgoxi"]
-[ext_resource type="Texture2D" uid="uid://dknfym4gli7rb" path="res://models/wall/wallPaint/wallPaint_cobblestoneAlternative.png" id="2_3hxk5"]
+[ext_resource type="Texture2D" uid="uid://dakq4gf3sqqm3" path="res://models/_contents/wallPaint/wallPaint_cobblestonePainted.png" id="1_tgoxi"]
+[ext_resource type="Texture2D" uid="uid://dknfym4gli7rb" path="res://models/_contents/wallPaint/wallPaint_cobblestoneAlternative.png" id="2_3hxk5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wfvgm"]
 resource_name = "stonesPainted"

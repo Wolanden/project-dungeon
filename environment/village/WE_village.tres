@@ -1,9 +1,9 @@
 [gd_resource type="Environment" load_steps=4 format=3 uid="uid://yuopuec38pbs"]
 
-[ext_resource type="Texture2D" uid="uid://i5lfx700tupr" path="res://textures/skybox/aristea_wreck_puresky_4k.hdr" id="1_l6brt"]
+[ext_resource type="Texture2D" uid="uid://db4e4kv0ry17l" path="res://textures/skybox/overcast_soil_4k.hdr" id="1_5r68a"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_5e208"]
-panorama = ExtResource("1_l6brt")
+panorama = ExtResource("1_5r68a")
 
 [sub_resource type="Sky" id="Sky_6kg0g"]
 sky_material = SubResource("PanoramaSkyMaterial_5e208")
@@ -11,4 +11,3 @@ sky_material = SubResource("PanoramaSkyMaterial_5e208")
 [resource]
 background_mode = 2
 sky = SubResource("Sky_6kg0g")
-ambient_light_source = 3
