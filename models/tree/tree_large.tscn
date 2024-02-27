@@ -7,7 +7,6 @@ resource_name = "treeA"
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_color = Color(1, 1, 1, 1)
 albedo_texture = ExtResource("1_3t16i")
 metallic = 0.35
 roughness = 0.5
@@ -52,7 +51,7 @@ shadow_mesh = SubResource("ArrayMesh_d5mlp")
 data = PackedVector3Array(0, 0, 0, 0, 0, 0.65, 0, 1.7, 0.65, 0, 1.7, 0.65, 0, 1.7, 0, 0, 0, 0, 0, 1.7, 0, 0, 0, -0.65, 0, 0, 0, 0, 1.7, 0, 0, 1.7, -0.65, 0, 0, -0.65, 0, 0, 0.65, 0, 0, 0, 0, 1.7, 0.65, 0, 1.7, 0, 0, 1.7, 0.65, 0, 0, 0, 0, 0, -0.65, 0, 1.7, 0, 0, 0, 0, 0, 1.7, -0.65, 0, 1.7, 0, 0, 0, -0.65, 0.65, 1.7, 0, 0.65, 0, 0, 0, 0, 0, 0, 0, 0, -0.65, 0, 0, 0.65, 1.7, 0, -0.65, 0, 0, -0.65, 1.7, 0, 0.65, 1.7, 0, -0.65, 1.7, 0, 0, 1.7, 0, 0.65, 1.7, 0, 0.65, 0, 0, 0.65, 1.7, 0, 0, 0, 0, -0.65, 0, 0, 0, 0, 0, 0.65, 1.7, 0, -0.65, 1.7, 0, -0.65, 0, 0, 0.65, 1.7, 0, 0, 1.7, 0, -0.65, 1.7, 0, 0.65, 1.7, 0)
 
 [node name="tree_large" type="StaticBody3D"]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0, 0, 0)
 
 [node name="tree_large" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_vwuno")
