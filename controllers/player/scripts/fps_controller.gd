@@ -9,6 +9,9 @@ extends CharacterBody3D
 @export var STRAFE_MULTIPLIER : float = 1
 @export var JUMP_VELOCITY : float = 8.5
 @export var MOUSE_SENSITIVITY : float = 0.5
+@export var HIT_DAMAGE : int = 5
+
+@export var HIT_STAGGER : float = 8.0
 
 @export var TILT_LOWER_LIMIT := deg_to_rad(-90.0)
 @export var TILT_UPPER_LIMIT := deg_to_rad(90.0)
@@ -18,8 +21,9 @@ extends CharacterBody3D
 @export var WEP_ANIMATION : AnimationPlayer
 @export var WEP_HITBOX : Area3D
 
-@onready var PARTICLES = preload("res://res/bloodsplatter/BloodSplatter.tscn")
-@onready var HEALTH_BAR = $Healthbar
+@onready var HEALTH_BAR = $UI/Healthbar
+
+@onready var hit_rect = $UI/ColorRect
 
 var SPEED : float = BASE_SPEED
 var HEALTH : float = BASE_HEALTH
@@ -30,7 +34,6 @@ var _rotation_input : float
 var _tilt_input : float
 var _player_rotation : Vector3
 var _camera_rotation : Vector3
-
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * 2
@@ -78,7 +81,6 @@ func _on_weapon_animation_animation_finished(anim_name):
 	if anim_name == "H_Attack":
 		WEP_ANIMATION.play("idle")
 		WEP_HITBOX.monitoring = false
-
 
 func _physics_process(delta):
 	
@@ -143,10 +145,12 @@ func TakeDamage(damage):
 	HEALTH_BAR._set_health(HEALTH - damage)
 	HEALTH -= damage
 
-func _on_hitbox_body_entered(body):
-	if body.is_in_group("enemies"):
-		body.TakeDamage(10)
-
-
 func _on_ready():
 	HEALTH_BAR._set_health(BASE_HEALTH)
+
+func hit(dir):
+	TakeDamage(HIT_DAMAGE)
+	velocity += dir * HIT_STAGGER
+	hit_rect.visible = true;
+	await get_tree().create_timer(0.2).timeout
+	hit_rect.visible = false;

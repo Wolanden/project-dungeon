@@ -19,8 +19,9 @@ mesh = ExtResource("2_qx5pc")
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.174691, 0.714004, -0.0260098)
 light_color = Color(1, 0.560784, 0, 1)
-light_volumetric_fog_energy = 9.912
 light_specular = 0.0
 shadow_enabled = true
-omni_range = 12.0
-omni_attenuation = 1.84237
+shadow_blur = 3.89
+omni_range = 20.0
+omni_attenuation = 1.09548
+omni_shadow_mode = 0

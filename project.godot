@@ -25,6 +25,10 @@ window/size/always_on_top=true
 
 project/assembly_name="Project Dungeon Crawl"
 
+[filesystem]
+
+import/fbx/enabled=false
+
 [input]
 
 move_forward={

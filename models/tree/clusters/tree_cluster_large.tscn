@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7uswfmldk5tp"]
+
+[ext_resource type="PackedScene" uid="uid://bcv0kyojpir8u" path="res://models/tree/clusters/tree_cluster_medium_a.tscn" id="1_iw61t"]
+[ext_resource type="PackedScene" uid="uid://carg1h001crha" path="res://models/tree/clusters/tree_cluster_medium_c.tscn" id="2_1ykxn"]
+[ext_resource type="PackedScene" uid="uid://3diowvr6q772" path="res://models/tree/clusters/tree_cluster_medium_b.tscn" id="3_ev7kp"]
+
+[node name="TreeClusterLarge" type="Node3D"]
+
+[node name="TreeClusterMediumA" parent="." instance=ExtResource("1_iw61t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.721028, 0, -0.960938)
+
+[node name="TreeClusterMediumC" parent="." instance=ExtResource("2_1ykxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4762, 0, -14.9231)
+
+[node name="TreeClusterMediumB" parent="." instance=ExtResource("3_ev7kp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56932, 0, 27.0054)
+
+[node name="TreeClusterMediumB2" parent="." instance=ExtResource("3_ev7kp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0618, 0, 21.3823)
+
+[node name="TreeClusterMediumB3" parent="." instance=ExtResource("3_ev7kp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2804, 0, 11.8812)
+
+[node name="TreeClusterMediumC2" parent="." instance=ExtResource("2_1ykxn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.422, 0, 34.3736)

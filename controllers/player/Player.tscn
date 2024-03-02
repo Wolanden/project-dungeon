@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://b7i4dbd5lrwgs"]
 
 [ext_resource type="Script" path="res://controllers/player/scripts/fps_controller.gd" id="1_pgc1p"]
-[ext_resource type="Material" uid="uid://b4gwd5h7ixvct" path="res://materials/player.tres" id="2_gldw4"]
+[ext_resource type="Material" path="res://materials/player.tres" id="2_gldw4"]
 [ext_resource type="PackedScene" uid="uid://c1gkisgwvliho" path="res://controllers/healthbar/healthbar.tscn" id="3_m28hu"]
 [ext_resource type="PackedScene" uid="uid://bxif3jps2w225" path="res://assets/sword/Sword.glb" id="3_vtsay"]
 
@@ -312,6 +312,7 @@ WEP_HITBOX = NodePath("CameraController/Camera3D/WeaponPivot/WeaponMesh/Hitbox")
 shape = SubResource("CapsuleShape3D_ix834")
 
 [node name="PlaceholderMesh" type="MeshInstance3D" parent="CollisionShape3D"]
+cast_shadow = 0
 mesh = SubResource("CapsuleMesh_oc2v5")
 
 [node name="CameraController" type="Node3D" parent="."]
@@ -322,15 +323,17 @@ fov = 90.0
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="CameraController/Camera3D"]
 update_mode = 1
+ambient_mode = 2
 
 [node name="WeaponPivot" type="Node3D" parent="CameraController/Camera3D"]
 
 [node name="WeaponMesh" type="MeshInstance3D" parent="CameraController/Camera3D/WeaponPivot"]
 transform = Transform3D(0.1, 0, 0, 0, 0.893372, 0.0449319, 0, -0.449319, 0.0893372, 0.414419, -0.477498, -0.520283)
+cast_shadow = 0
 mesh = SubResource("BoxMesh_dgowj")
 
 [node name="Hitbox" type="Area3D" parent="CameraController/Camera3D/WeaponPivot/WeaponMesh"]
-transform = Transform3D(1.1, 0, 0, 1.86265e-09, 1.1, -8.14907e-10, -3.72529e-09, -4.47035e-08, 1.1, -0.0248697, 0.000916243, -0.018218)
+transform = Transform3D(1.15451, 0, 0, 1.95495e-09, 1.15451, 3.72529e-09, -3.90989e-09, 9.53674e-07, 1.15451, -0.0248694, 0.000916243, -0.018218)
 monitoring = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CameraController/Camera3D/WeaponPivot/WeaponMesh/Hitbox"]
@@ -359,11 +362,27 @@ shape = SubResource("SphereShape3D_5v2gh")
 target_position = Vector3(0, 0.5, 0)
 debug_shape_custom_color = Color(0, 1, 0, 1)
 
-[node name="Healthbar" parent="." instance=ExtResource("3_m28hu")]
-offset_left = -615.0
-offset_top = -388.0
-offset_right = -375.0
-offset_bottom = -373.0
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Healthbar" parent="UI" instance=ExtResource("3_m28hu")]
+layout_mode = 1
+offset_left = -10.0
+offset_top = -8.0
+offset_right = 230.0
+offset_bottom = 7.0
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = -289.0
+offset_top = -251.0
+offset_right = 1536.0
+offset_bottom = 1064.0
+color = Color(1, 0, 0, 0.184314)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="body_entered" from="CameraController/Camera3D/WeaponPivot/WeaponMesh/Hitbox" to="." method="_on_hitbox_body_entered"]

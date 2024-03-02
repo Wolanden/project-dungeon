@@ -10,5 +10,8 @@ sky_material = SubResource("PanoramaSkyMaterial_5e208")
 
 [resource]
 background_mode = 2
-background_energy_multiplier = 0.1
+background_energy_multiplier = 0.05
 sky = SubResource("Sky_6kg0g")
+fog_enabled = true
+fog_sun_scatter = 0.5
+fog_aerial_perspective = 0.75

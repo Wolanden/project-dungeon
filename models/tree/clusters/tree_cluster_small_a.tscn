@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbs3onj3gnupi"]
+
+[ext_resource type="PackedScene" uid="uid://c1431okowupvp" path="res://models/tree/tree_large.tscn" id="1_0a8ln"]
+[ext_resource type="PackedScene" uid="uid://csr2i62dncjvp" path="res://models/tree/tree_pine_large.tscn" id="2_3qgfi"]
+[ext_resource type="PackedScene" uid="uid://bfkpi3l8ld8uh" path="res://models/tree/tree_pine_small.tscn" id="3_yhia6"]
+[ext_resource type="PackedScene" uid="uid://dah6bbal7hpd1" path="res://models/tree/tree_shrub.tscn" id="4_ibokk"]
+[ext_resource type="PackedScene" uid="uid://cl5apfjfu743n" path="res://models/tree/tree_small.tscn" id="5_i77n4"]
+
+[node name="TreeClusterSmallA" type="Node3D"]
+
+[node name="tree_large" parent="." instance=ExtResource("1_0a8ln")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 0.126322, 0, 0.0357912)
+
+[node name="tree_large2" parent="." instance=ExtResource("1_0a8ln")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 8.23243, 0, 0.281995)
+
+[node name="treePine_large" parent="." instance=ExtResource("2_3qgfi")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 4.16434, 0, 3.72418)
+
+[node name="treePine_large2" parent="." instance=ExtResource("2_3qgfi")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 3.91222, 0, -3.08524)
+
+[node name="treePine_small" parent="." instance=ExtResource("3_yhia6")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 1.42172, -4.76837e-07, 3.42606)
+
+[node name="tree_shrub" parent="." instance=ExtResource("4_ibokk")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, -1.0595, 0, 1.2879)
+
+[node name="tree_small" parent="." instance=ExtResource("5_i77n4")]
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 3.23882, 0, 4.92338)
