@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://b7i4dbd5lrwgs"]
+[gd_scene load_steps=20 format=3 uid="uid://b7i4dbd5lrwgs"]
 
 [ext_resource type="Script" path="res://controllers/player/scripts/fps_controller.gd" id="1_pgc1p"]
-[ext_resource type="Material" path="res://materials/player.tres" id="2_gldw4"]
+[ext_resource type="Material" uid="uid://b4gwd5h7ixvct" path="res://materials/player.tres" id="2_gldw4"]
 [ext_resource type="PackedScene" uid="uid://c1gkisgwvliho" path="res://controllers/healthbar/healthbar.tscn" id="3_m28hu"]
 [ext_resource type="PackedScene" uid="uid://bxif3jps2w225" path="res://models/sword/Sword.glb" id="3_vtsay"]
 
@@ -300,6 +300,9 @@ _data = {
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_5v2gh"]
 
+[sub_resource type="Theme" id="Theme_w8gvv"]
+default_font_size = 35
+
 [node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("CAMERA_CONTROLLER", "ANIMATION_PLAYER", "WEP_ANIMATION", "WEP_HITBOX")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_pgc1p")
@@ -384,7 +387,33 @@ offset_right = 1536.0
 offset_bottom = 1064.0
 color = Color(1, 0, 0, 0.184314)
 
+[node name="GameOver" type="VBoxContainer" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 558.0
+offset_top = 348.0
+offset_right = 654.0
+offset_bottom = 414.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_w8gvv")
+
+[node name="retry" type="Button" parent="UI/GameOver"]
+layout_mode = 2
+text = "Restart"
+
+[node name="mainmenu" type="Button" parent="UI/GameOver"]
+layout_mode = 2
+text = "Main Menu"
+
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="CameraController/Camera3D/WeaponPivot/WeaponMesh/Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="animation_finished" from="CameraController/Camera3D/WeaponPivot/WeaponAnimation" to="." method="_on_weapon_animation_animation_finished"]
 [connection signal="animation_started" from="AnimationPlayer" to="." method="_on_animation_player_animation_started"]
+[connection signal="pressed" from="UI/GameOver/retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="UI/GameOver/mainmenu" to="." method="_on_mainmenu_pressed"]

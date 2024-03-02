@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://8485vo6yx8hy"]
+[gd_scene load_steps=35 format=3 uid="uid://8485vo6yx8hy"]
 
 [ext_resource type="Script" path="res://levels/village/village.gd" id="1_lnmb3"]
 [ext_resource type="Texture2D" uid="uid://ddve7nsdiyfam" path="res://textures/floor/Dirty_Grass_DIFF.jpg" id="2_735x0"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://cbs3onj3gnupi" path="res://models/tree/clusters/tree_cluster_small_a.tscn" id="29_j6xhy"]
 [ext_resource type="PackedScene" uid="uid://exqur3o3is2o" path="res://models/tree/clusters/tree_cluster_small_b.tscn" id="30_r6s80"]
 [ext_resource type="PackedScene" uid="uid://daojxb7prr7jb" path="res://models/tree/clusters/tree_cluster_small_c.tscn" id="31_1a8h8"]
+[ext_resource type="PackedScene" uid="uid://bc8hqf1311gy" path="res://models/npc/zombie.tscn" id="32_5btv7"]
 [ext_resource type="PackedScene" uid="uid://3diowvr6q772" path="res://models/tree/clusters/tree_cluster_medium_b.tscn" id="32_ka2sg"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_v5pte"]
@@ -61,6 +62,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 63.4897, 7.62939e-06, -100.13
 
 [node name="Spawn5" type="Node3D" parent="Spawns"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -82.5903, 0, -3.58972)
+
+[node name="Spawn6" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4097, 0, -18.5897)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_v5pte")
@@ -1270,24 +1274,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 1)
 
 [node name="Player" parent="." instance=ExtResource("3_sv1fe")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.4644, 1, 123.153)
-BASE_SPEED = 5.0
-BASE_HEALTH = 100.0
-SPRINT_MULTIPLIER = 2.5
-VIEW_BOB_ANIMATION = true
-VIEW_BOB_MULTIPLIER = 0.1
-STRAFE_ANIMATION = true
-STRAFE_MULTIPLIER = 1.0
-JUMP_VELOCITY = 8.5
-MOUSE_SENSITIVITY = 0.5
-HIT_DAMAGE = 5
-HIT_STAGGER = 8.0
-TILT_LOWER_LIMIT = -1.5708
-TILT_UPPER_LIMIT = 1.5708
 
 [node name="WeVillage" parent="." instance=ExtResource("4_bmktj")]
 
 [node name="ZombieSpawnTimer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
+[node name="zombie" parent="." instance=ExtResource("32_5btv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -27)
+
+[node name="zombie2" parent="." instance=ExtResource("32_5btv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, -26)
+
+[node name="zombie3" parent="." instance=ExtResource("32_5btv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -9)
+
+[node name="zombie4" parent="." instance=ExtResource("32_5btv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -16)
+
+[node name="zombie5" parent="." instance=ExtResource("32_5btv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -44)
 
 [connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]

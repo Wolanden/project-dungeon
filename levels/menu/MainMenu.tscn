@@ -1,9 +1,45 @@
-[gd_scene format=3 uid="uid://bvx8slxffdo6e"]
+[gd_scene load_steps=3 format=3 uid="uid://bvx8slxffdo6e"]
+
+[ext_resource type="Script" path="res://levels/menu/MainMenu.gd" id="1_3tcll"]
+
+[sub_resource type="Theme" id="Theme_0elxa"]
+default_font_size = 35
 
 [node name="MainMenu" type="Control"]
+process_mode = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3tcll")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+top_level = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -33.0
+offset_right = 46.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_0elxa")
+alignment = 1
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit Game"
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

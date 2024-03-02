@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export var BASE_SPEED : float = 5.0
-@export var BASE_HEALTH : float = 100.0
+@export var BASE_HEALTH : float = 10.0
 @export var SPRINT_MULTIPLIER : float = 2.5
 @export var VIEW_BOB_ANIMATION : bool = true
 @export var VIEW_BOB_MULTIPLIER : float = 0.1
@@ -24,6 +24,7 @@ extends CharacterBody3D
 @onready var HEALTH_BAR = $UI/Healthbar
 @onready var hit_rect = $UI/ColorRect
 @onready var sword_collider = $CameraController/Camera3D/WeaponPivot/WeaponMesh/Hitbox
+@onready var game_over	= $UI/GameOver
 
 var SPEED : float = BASE_SPEED
 var HEALTH : float = BASE_HEALTH
@@ -75,7 +76,8 @@ func _process(delta):
 		WEP_HITBOX.monitoring = true
 		
 	if HEALTH <= 0:
-		print("you ded")
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		game_over.visible = true
 	
 func _on_hitbox_area_entered(area):
 	if area.is_in_group("enemy"):
@@ -153,8 +155,17 @@ func _on_ready():
 	HEALTH_BAR._set_health(BASE_HEALTH)
 
 func hit(dir):
-	TakeDamage(HIT_DAMAGE)
-	velocity += dir * HIT_STAGGER
-	hit_rect.visible = true;
-	await get_tree().create_timer(0.2).timeout
-	hit_rect.visible = false;
+	if HEALTH > 0:
+		TakeDamage(HIT_DAMAGE)
+		velocity += dir * HIT_STAGGER
+		hit_rect.visible = true;
+		await get_tree().create_timer(0.2).timeout
+		hit_rect.visible = false;
+
+
+func _on_retry_pressed():
+	get_tree().reload_current_scene()
+
+
+func _on_mainmenu_pressed():
+	get_tree().change_scene_to_file("res://levels/menu/MainMenu.tscn")

@@ -11,7 +11,8 @@ func _ready():
 	randomize()
 
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed("open_menu"):
+		get_tree().change_scene_to_file("res://levels/menu/MainMenu.tscn")
 
 func _physics_process(delta):
 	get_tree().call_group("enemies", "UpdateTargetLocation", player.global_transform.origin)
