@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 var player = null
 var state_machine
+var health = 6
 
 const SPEED = 1.0
 const ATTACK_RANGE = 2.5
@@ -11,6 +12,12 @@ const ATTACK_RANGE = 2.5
 @onready var nav_agent = $NavigationAgent3D
 @onready var anim_tree = $AnimationTree
 
+@onready var healthBar = $SubViewport/Healthbar
+
+func _on_ready():
+	healthBar.init_health(health)
+	healthBar._set_health(health)
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	player = get_node(player_path)
@@ -43,3 +50,10 @@ func _hit_finished():
 	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 1.0:
 		var dir = global_position.direction_to(player.global_position)
 		player.hit(dir)
+
+
+func _on_area_3d_body_part_hit(dam):
+	health -= dam
+	healthBar._set_health(health)
+	if health <= 0:
+		queue_free()

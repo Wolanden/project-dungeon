@@ -22,8 +22,8 @@ extends CharacterBody3D
 @export var WEP_HITBOX : Area3D
 
 @onready var HEALTH_BAR = $UI/Healthbar
-
 @onready var hit_rect = $UI/ColorRect
+@onready var sword_collider = $CameraController/Camera3D/WeaponPivot/WeaponMesh/Hitbox
 
 var SPEED : float = BASE_SPEED
 var HEALTH : float = BASE_HEALTH
@@ -76,7 +76,11 @@ func _process(delta):
 		
 	if HEALTH <= 0:
 		print("you ded")
-
+	
+func _on_hitbox_area_entered(area):
+	if area.is_in_group("enemy"):
+		area.hit()
+		
 func _on_weapon_animation_animation_finished(anim_name):
 	if anim_name == "H_Attack":
 		WEP_ANIMATION.play("idle")

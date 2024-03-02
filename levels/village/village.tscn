@@ -1270,6 +1270,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 1)
 
 [node name="Player" parent="." instance=ExtResource("3_sv1fe")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 37.4644, 1, 123.153)
+BASE_SPEED = 5.0
+BASE_HEALTH = 100.0
+SPRINT_MULTIPLIER = 2.5
+VIEW_BOB_ANIMATION = true
+VIEW_BOB_MULTIPLIER = 0.1
+STRAFE_ANIMATION = true
+STRAFE_MULTIPLIER = 1.0
+JUMP_VELOCITY = 8.5
+MOUSE_SENSITIVITY = 0.5
+HIT_DAMAGE = 5
+HIT_STAGGER = 8.0
+TILT_LOWER_LIMIT = -1.5708
+TILT_UPPER_LIMIT = 1.5708
 
 [node name="WeVillage" parent="." instance=ExtResource("4_bmktj")]
 
