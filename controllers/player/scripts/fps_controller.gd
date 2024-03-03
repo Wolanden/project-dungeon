@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export var BASE_SPEED : float = 5.0
-@export var BASE_HEALTH : float = 10.0
+@export var BASE_HEALTH : float = 100.0
 @export var SPRINT_MULTIPLIER : float = 2.5
 @export var VIEW_BOB_ANIMATION : bool = true
 @export var VIEW_BOB_MULTIPLIER : float = 0.1
@@ -25,6 +25,10 @@ extends CharacterBody3D
 @onready var hit_rect = $UI/ColorRect
 @onready var sword_collider = $CameraController/Camera3D/WeaponPivot/WeaponMesh/Hitbox
 @onready var game_over	= $UI/GameOver
+@onready var kill_count_text = $UI/EnemyKilledCount
+@onready var timer = $UI/Timer
+
+var KILL_COUNT = 0
 
 var SPEED : float = BASE_SPEED
 var HEALTH : float = BASE_HEALTH
@@ -44,10 +48,6 @@ func _unhandled_input(event):
 	if _mouse_input:
 		_rotation_input = -event.relative.x * MOUSE_SENSITIVITY
 		_tilt_input = -event.relative.y * MOUSE_SENSITIVITY
-
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("exit"):
-		get_tree().quit()
 
 func _update_camera(delta):
 	
@@ -76,9 +76,13 @@ func _process(delta):
 		WEP_HITBOX.monitoring = true
 		
 	if HEALTH <= 0:
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-		game_over.visible = true
-	
+		player_dies()
+
+func player_dies():
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	game_over.visible = true
+	timer.stop()
+
 func _on_hitbox_area_entered(area):
 	if area.is_in_group("enemy"):
 		area.hit()
@@ -147,7 +151,7 @@ func sprinting(state : bool):
 		false:
 			SPEED = BASE_SPEED
 
-func TakeDamage(damage):
+func take_damage(damage):
 	HEALTH_BAR._set_health(HEALTH - damage)
 	HEALTH -= damage
 
@@ -156,16 +160,21 @@ func _on_ready():
 
 func hit(dir):
 	if HEALTH > 0:
-		TakeDamage(HIT_DAMAGE)
+		take_damage(HIT_DAMAGE)
 		velocity += dir * HIT_STAGGER
 		hit_rect.visible = true;
 		await get_tree().create_timer(0.2).timeout
 		hit_rect.visible = false;
 
-
 func _on_retry_pressed():
 	get_tree().reload_current_scene()
 
-
 func _on_mainmenu_pressed():
 	get_tree().change_scene_to_file("res://levels/menu/MainMenu.tscn")
+
+func update_kill_count(amount):
+	KILL_COUNT += amount
+	kill_count_text.text = "Enemies Killed: " + str(KILL_COUNT)
+
+func _on_zombie_died():
+	update_kill_count(1)

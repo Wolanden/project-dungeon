@@ -14,6 +14,8 @@ const ATTACK_RANGE = 2.5
 
 @onready var healthBar = $SubViewport/Healthbar
 
+signal enemy_died
+
 func _on_ready():
 	healthBar.init_health(health)
 	healthBar._set_health(health)
@@ -51,9 +53,9 @@ func _hit_finished():
 		var dir = global_position.direction_to(player.global_position)
 		player.hit(dir)
 
-
 func _on_area_3d_body_part_hit(dam):
 	health -= dam
 	healthBar._set_health(health)
 	if health <= 0:
+		emit_signal("enemy_died")
 		queue_free()

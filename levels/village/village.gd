@@ -5,7 +5,7 @@ extends Node3D
 @onready var navigation_region = $NavigationRegion3D
 
 var zombie = load("res://models/npc/zombie.tscn")
-var instance
+var zombie_instance
 
 func _ready():
 	randomize()
@@ -23,6 +23,8 @@ func _get_random_child(parent_node):
 
 func _on_zombie_spawn_timer_timeout():
 	var spawn_point = _get_random_child(spawns).global_position
-	instance = zombie.instantiate()
-	instance.position = spawn_point
-	navigation_region.add_child(instance)
+	zombie_instance = zombie.instantiate()
+	zombie_instance.position = spawn_point
+	navigation_region.add_child(zombie_instance)
+	
+	zombie_instance.connect("enemy_died", Callable(player, "_on_zombie_died"))

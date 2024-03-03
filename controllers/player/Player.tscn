@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=3 uid="uid://b7i4dbd5lrwgs"]
+[gd_scene load_steps=21 format=3 uid="uid://b7i4dbd5lrwgs"]
 
 [ext_resource type="Script" path="res://controllers/player/scripts/fps_controller.gd" id="1_pgc1p"]
-[ext_resource type="Material" uid="uid://b4gwd5h7ixvct" path="res://materials/player.tres" id="2_gldw4"]
+[ext_resource type="Material" path="res://materials/player.tres" id="2_gldw4"]
 [ext_resource type="PackedScene" uid="uid://c1gkisgwvliho" path="res://controllers/healthbar/healthbar.tscn" id="3_m28hu"]
 [ext_resource type="PackedScene" uid="uid://bxif3jps2w225" path="res://models/sword/Sword.glb" id="3_vtsay"]
+[ext_resource type="Script" path="res://controllers/player/Timer.gd" id="5_4t42g"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ix834"]
 
@@ -371,6 +372,14 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="EnemyKilledCount" type="TextEdit" parent="UI"]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 15.0
+offset_right = 1237.0
+offset_bottom = 50.0
+text = "Enemies Killed: 0"
+
 [node name="Healthbar" parent="UI" instance=ExtResource("3_m28hu")]
 layout_mode = 1
 offset_left = -10.0
@@ -410,6 +419,42 @@ text = "Restart"
 [node name="mainmenu" type="Button" parent="UI/GameOver"]
 layout_mode = 2
 text = "Main Menu"
+
+[node name="Timer" type="Panel" parent="UI"]
+layout_mode = 0
+offset_left = 1060.0
+offset_top = 61.0
+offset_right = 1237.0
+offset_bottom = 95.0
+script = ExtResource("5_4t42g")
+
+[node name="M" type="Label" parent="UI/Timer"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 44.0
+offset_bottom = 28.0
+text = "00:"
+horizontal_alignment = 2
+
+[node name="S" type="Label" parent="UI/Timer"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 5.0
+offset_right = 70.0
+offset_bottom = 28.0
+text = "00:"
+horizontal_alignment = 2
+
+[node name="MS" type="Label" parent="UI/Timer"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 5.0
+offset_right = 101.0
+offset_bottom = 28.0
+text = "000
+"
+horizontal_alignment = 2
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="CameraController/Camera3D/WeaponPivot/WeaponMesh/Hitbox" to="." method="_on_hitbox_area_entered"]
