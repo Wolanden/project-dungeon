@@ -4,7 +4,7 @@ var player = null
 var state_machine
 var health = 6
 
-const SPEED = 1.0
+const SPEED = 1.5
 const ATTACK_RANGE = 2.5
 
 @export var player_path := "/root/World/Player"
